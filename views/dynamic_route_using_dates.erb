@@ -1,0 +1,13 @@
+<h2>With date</h2>
+
+<ul>
+  <li>Year: <%= @date.year %></li>
+  <li>Month: <%= @date.month %></li>
+  <li>Day: <%= @date.day %></li>
+</ul>
+<p>
+  <%= link_to "<< Previous day", (@date - 1).strftime("/%Y/%m/%d") %>
+  |
+  <%= link_to "Following day >>", (@date + 1).strftime("/%Y/%m/%d") %>
+</p>
+
