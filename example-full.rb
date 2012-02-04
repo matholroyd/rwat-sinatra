@@ -8,10 +8,17 @@ require 'haml'
 # list other files
 require './lib/helpers'
 
-
 # A route handler
 get '/' do
   erb :index
+end
+
+get '/simple-page' do
+  erb :simple_page
+end
+
+get '/simple-page-no-layout' do
+  erb :simple_page, :layout => false
 end
 
 get '/plain-text' do
@@ -22,7 +29,7 @@ get '/plain-text-with-layout' do
   erb "If specifying a layout, need to pick a parser (e.g. <code>erb</code>)", :layout => :layout
 end
 
-get '/haml' do
+get '/haml-example' do
   haml :haml_example
 end
 
@@ -33,7 +40,7 @@ get '/:year/:month/:day' do |year, month, day|
   erb :dynamic_route_using_dates
 end
 
-# To get SCSS stylesheets dynamically generated, put behind
+# To get Sass stylesheets dynamically generated, put behind
 # a special route. Note that the main.scss file is in /views/, but
 # referred to in the HTML <head> as /scss/main.css
 get '/scss/:name.css' do |filename|

@@ -1,11 +1,16 @@
 %h2 HAML example
 %p
   This file is written in 
-  %code haml
+  = link_to 'Haml', 'http://haml-lang.com/'
 %p
-  Note that the using the 
-  %code haml :filenane 
-  in the action means sinatra assumes the layout is also a 
+  Note that when using 
+  %code Haml
+  sinatra requires the layout file to also be a
   %code .haml 
   file
+%p
+  E.g. the
+  %code layout.erb
+  file is ignored when rendering 
+  %code Haml
   
