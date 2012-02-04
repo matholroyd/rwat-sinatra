@@ -1,3 +1,22 @@
+body {
+  background: white url(/images/legend.gif) no-repeat fixed right 25*18px
+}
+
+#header {
+  margin-bottom:18px;
+  h1 {
+    font-family: georgia, 'bitstream vera serif', serif;
+    font-size: 18px * 3;
+    line-height: 18px * 3;
+    margin-bottom: 0;
+  
+  }
+  p {
+    font-style:italic;
+    margin-bottom:0;
+  }
+  
+}
 
 #footer {
   margin-top: 18px;
