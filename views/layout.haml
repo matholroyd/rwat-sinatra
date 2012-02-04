@@ -1,0 +1,24 @@
+%html
+  %head
+    %link{:href=>"/stylesheets/screen.css", :media=>"screen, projection", :rel=>"stylesheet", :type=>"text/css"}
+    %link{:href=>"/scss/main.css", :media=>"screen, projection", :rel=>"stylesheet", :type=>"text/css"}
+    %script{:type=>"text/javascript", :src=>"/javascript/jquery-1.7.1.min.js"}
+    %script{:type=>"text/javascript", :src=>"/javascript/application.js"}
+  %body 
+    .container.prepend-4.span-12.append-4.last
+      %header#header
+        %h1 Example Sinatra webapp
+        %h2
+          Note: this is using the 
+          %code layout.haml
+          file
+      %nav#nav
+        = link_to "home", "/"
+        %p
+          Route is
+          %code= request.path
+      #main= yield
+      %footer#footer
+        %hr
+        Mat Holroyd &copy; 
+        = Date.today.year

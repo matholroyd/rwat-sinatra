@@ -2,8 +2,8 @@ require 'rubygems'
 require 'sinatra'
 
 # list other gems
-require 'erb'
 require 'sass'
+require 'haml'
 
 # list other files
 require './lib/helpers'
@@ -14,14 +14,30 @@ get '/' do
   erb :index
 end
 
+get '/plain-text' do
+  "If a string is returned, Sinatra just renders the text (no layout)"
+end
+
+get '/plain-text-with-layout' do
+  erb "If specifying a layout, need to pick a parser (e.g. <code>erb</code>)", :layout => :layout
+end
+
+get '/haml' do
+  haml :haml_example
+end
+
+
 get '/:year/:month/:day' do |year, month, day|
   @date = Date.new(year.to_i, month.to_i, day.to_i)
   
   erb :dynamic_route_using_dates
 end
 
-get '/scss/:name.css' do |name|
-  scss name.to_sym, :style => :expanded
+# To get SCSS stylesheets dynamically generated, put behind
+# a special route. Note that the main.scss file is in /views/, but
+# referred to in the HTML <head> as /scss/main.css
+get '/scss/:name.css' do |filename|
+  scss filename.to_sym, :style => :expanded
 end
 
 # Use the 'helper' block to define methods accessible from within views
