@@ -14,10 +14,12 @@ get '/' do
 end
 
 get '/embedded-ruby' do
+  @x = 100
   erb :"embedded-ruby"
 end
 
 get '/embedded-ruby-no-layout' do
+  @x = 200
   erb :"embedded-ruby", :layout => false
 end
 

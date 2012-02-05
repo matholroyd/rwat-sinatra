@@ -1,10 +1,32 @@
 <h2>Embedded Ruby</h2>
 
 <p>
-  Current date + time is <%= Time.now.strftime("%Y-%d-%m %I:%M%p")%>
+  Current date is <%= Time.now.strftime("%Y-%d-%m")%>
+</p>
+<p>
+  Current time is  <%= Time.now.strftime("%I:%M%p %Ss")%>
 </p>
 <p>
   1 + 2 = <%= 1 + 2 %>
 </p>
+<p>
+  @x = <%= @x %> and was defined in <code>example-full.rb</code>
+</p>
+<div>
+  <p>
+    if animal equals "dog" then bark
+  </p>
+  <p>
+    if animal equals "cat" then meow
+  </p>
+  <p>Set animal == "cat"</p>
+  
+  <% animal = "cat" %>
+  <% if animal == "cat" %>
+    <strong>Meow!</strong>
+  <% elsif animal == "dog" %>
+    <strong>Bark!</strong>
+  <% end %>
+</div>
 
 
