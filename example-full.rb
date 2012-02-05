@@ -13,20 +13,16 @@ get '/' do
   erb :index
 end
 
-get '/simple-page' do
-  erb :simple_page
+get '/embedded-ruby' do
+  erb :"embedded-ruby"
 end
 
-get '/simple-page-no-layout' do
-  erb :simple_page, :layout => false
+get '/embedded-ruby-no-layout' do
+  erb :"embedded-ruby", :layout => false
 end
 
 get '/plain-text' do
   "If a string is returned, Sinatra just renders the text (no layout)"
-end
-
-get '/plain-text-with-layout' do
-  erb "If specifying a layout, need to pick a parser (e.g. <code>erb</code>)", :layout => :layout
 end
 
 get '/haml-example' do
