@@ -14,10 +14,11 @@
         <h1>Sinatra</h1>
       </header>
       <nav id="nav">
-        <%= link_to "home", "/" %>
-        <p>
-          Route is <code><%= request.path %></code>
-        </p>
+        <%= link_to "<< home", "/" %>
+        <div class="info">
+          <p>Request was  <code><%= request.request_method %> <%= request.path %></code></p>
+          <p>Params were: <code><%= params.inspect %></code></p>
+        </div>
       </nav>
       <div id="main">
         <%= yield %>

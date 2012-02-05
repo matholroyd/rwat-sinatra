@@ -9,15 +9,20 @@
       %header#header
         %p Ruby Webapp Tutorial
         %h1 Sinatra
-        %h2
-          Note: this is using the 
-          %code layout.haml
-          file
       %nav#nav
-        = link_to "home", "/"
-        %p
-          Route is
-          %code= request.path
+        = link_to "<< home", "/"
+        .info
+          %p 
+            Request was
+            %code= "#{request.request_method} #{request.path}"
+          %p 
+            Params were:
+            %code= params.inspect
+          %h3
+            Note: this is using the 
+            %code layout.haml
+            file
+
       #main= yield
       %footer#footer
         %hr
