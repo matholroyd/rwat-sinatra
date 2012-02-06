@@ -34,3 +34,24 @@ code, pre {
 code {
   padding: 0 2px;
 }
+
+form {
+  label {
+    display: block;
+  }
+  p.radio {
+    label {
+      display:;
+    }
+  }
+  input[type=text], input[type=email] {
+    width: 70%;
+  }
+  input[type=url] {
+    width: 90%;
+  }
+  background: white;
+  textarea {
+    height: 4* 18px;
+  }
+}

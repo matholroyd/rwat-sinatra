@@ -1,0 +1,50 @@
+<form action="/submit-form" method="POST">
+  <fieldset>
+    <legend>A simple form</legend>
+    <p>
+      <label for="name_input">Plain text</label>
+      <input id="name_input" name="name" type="text" placeholder="Enter your name" value="Bob Smith">
+    </p>
+    <p>
+      <label for="password_input">Password field</label>
+      <input id="password_input" name="password" type="password" placeholder="Enter your password" value="secret">
+    </p>
+    <p>
+      <label for="work_email_input">Email field - great for mobile devies</label>
+      <input id="work_email_input" name="work_email" type="email" placeholder="Enter your work email" value="bobby@bobsbits.com">
+    </p>
+    <p>
+      <label for="homepage_input">URL field - great for mobile devies</label>
+      <input id="homepage_input" name="homepage" type="url" placeholder="What is your homepage?" value="http://bobsmagicbits.com">
+    </p>
+    <p>
+      <label for="address_input">Textarea</label>
+      <textarea id="address_input" name="address" placeholder="What is your address?">
+100 park st
+Melbourne
+Victoria</textarea>
+    </p>
+    <h3>Radio buttons</h3>
+    <p class="radio">
+      <input id="gender_male" type="radio" name="gender" value="m" checked="checked">
+      <label for="gender_male">Male</label>
+    </p>
+    <p>
+      <input id="gender_female" type="radio" name="gender" value="f" >
+      <label for="gender_female">Female</label>
+    </p>
+    <h3>Checkboxes</h3>
+    <p class="checkbox">
+      <input id="accept_tac_input" type="checkbox" name="accept_terms_and_conditions" value="true" checked="checked">
+      <label for="accept_tac_input">Accept Terms and Conditions</label>
+    </p>
+    <p class="checkbox">
+      <input id="receive_emails_input" type="checkbox" name="receive_emails" value="true">
+      <label for="receive_emails_input">Receive automated emails</label>
+    </p>
+    <p>
+      <input type="submit" value="Submit Form">
+    </p>
+  </div>
+</form>
+

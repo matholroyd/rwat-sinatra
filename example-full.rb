@@ -23,6 +23,18 @@ get '/embedded-ruby-no-layout' do
   erb :embedded_ruby, :layout => false
 end
 
+get '/form-example' do
+  erb :form_example
+end
+
+post '/submit-form' do
+  erb :form_example
+end
+
+put '/submit-form' do
+  erb :form_example
+end
+
 get '/plain-text' do
   "If a string is returned, Sinatra just renders the text (no layout)"
 end
