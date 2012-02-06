@@ -15,12 +15,12 @@ end
 
 get '/embedded-ruby' do
   @x = 100
-  erb :"embedded-ruby"
+  erb :embedded_ruby
 end
 
 get '/embedded-ruby-no-layout' do
   @x = 200
-  erb :"embedded-ruby", :layout => false
+  erb :embedded_ruby, :layout => false
 end
 
 get '/plain-text' do
