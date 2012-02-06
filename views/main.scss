@@ -39,9 +39,9 @@ form {
   label {
     display: block;
   }
-  p.radio {
+  .radio, .checkbox {
     label {
-      display:;
+      display:inline;
     }
   }
   input[type=text], input[type=email] {

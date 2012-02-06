@@ -10,6 +10,10 @@
       <input id="password_input" name="password" type="password" placeholder="Enter your password" value="secret">
     </p>
     <p>
+      <label>Hidden field</label>
+      <input name="the_hidden_field" type="hidden" value="42">
+    </p>
+    <p>
       <label for="work_email_input">Email field - great for mobile devies</label>
       <input id="work_email_input" name="work_email" type="email" placeholder="Enter your work email" value="bobby@bobsbits.com">
     </p>
@@ -24,15 +28,17 @@
 Melbourne
 Victoria</textarea>
     </p>
-    <h3>Radio buttons</h3>
-    <p class="radio">
-      <input id="gender_male" type="radio" name="gender" value="m" checked="checked">
-      <label for="gender_male">Male</label>
-    </p>
-    <p>
-      <input id="gender_female" type="radio" name="gender" value="f" >
-      <label for="gender_female">Female</label>
-    </p>
+    <div class="radio">
+      <h3>Radio buttons</h3>
+      <p>
+        <input id="gender_male" type="radio" name="gender" value="m" checked="checked">
+        <label for="gender_male">Male</label>
+      </p>
+      <p>
+        <input id="gender_female" type="radio" name="gender" value="f" >
+        <label for="gender_female">Female</label>
+      </p>
+    </div>
     <h3>Checkboxes</h3>
     <p class="checkbox">
       <input id="accept_tac_input" type="checkbox" name="accept_terms_and_conditions" value="true" checked="checked">
